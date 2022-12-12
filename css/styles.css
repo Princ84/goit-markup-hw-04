@@ -50,7 +50,7 @@ body {
 .main-container{
   display: flex;
   align-items: center;
-  
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header{
  display: flex;
@@ -155,7 +155,7 @@ body {
   padding-top: 0;
 }
 .hero{
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   background-color:var(--headings-text-color); 
   padding-top: 192px;
   padding-bottom: 192px;
@@ -164,7 +164,9 @@ body {
   background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
   url(../images/people-office.jpg);
   background-size: cover;
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto
   
 
   
@@ -222,19 +224,21 @@ button :active{
 }
 
 .skill-link-item{
- 
+ display: flex;
+ justify-content: center;
+ align-items: center;
   margin: 0;
-  padding: 24px 100px;
+  /* padding: 24px 100px; */
   margin-bottom: 8px;
-  width: 264px;
+  /* width: 264px; */
   height: 112px;
   background-color: var(--subaccent-color);
   border-radius: 4px;
 }
-/* .skill-link-list{ */
-  /* width: 264px; */
-  
-/* } */
+.skill-link-icon{
+  width: 64px;
+  height: 64px;
+}
 
 
 .future-skill{
@@ -278,39 +282,33 @@ text-transform: capitalize;
 color: var(--headings-text-color);
 
 }
-.our-icon-list> a {
-  display: flex;
-  /* justify-content: center; */
-}
+
 .our-team-ic{
   display:flex;
   justify-content:center;
   gap: 24px;
 }
-.our-team-ic >li {
-  display:flex;
+.our-link-social{
+  display: flex;
   justify-content:center;
   align-items:center;
   width: 40px;
   height: 40px;
-  padding: 12px 12px;
   border-radius: 50%;
-  background-color: var(--activ-but-color);
+  background-color:var(--primery-band-color)
 }
 .our-icon{
-  width: 16px;
-  height: 16px;
-  fill: var(--secondary-color);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 12px;
+  height: 12px;
+  fill: #ffffff;
 }
 
 
-/* .our-team{ */
-/* background-color:var(--subaccent-color); */
 
-/* } */
-.our-team-icons{
-  background-color: var(--secondary-color);
-}
+
 .our-team-item{
   text-align: center;
   padding-bottom: 120px;
@@ -349,40 +347,47 @@ color: var(--text-color);
 margin-bottom: 12px;
 }
 /* ------------Customer---------------- */
+
 .customer{
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-bottom: 120px;
+  align-items: center;
   gap: 24px;
+   margin-bottom: 120px;
 }
-.customer-list{
+.custom-list-icon{
   display: flex;
-  border: 1px solid #8E8F99;
-  border-radius: 4px; 
+  justify-content: center;
+  align-items: center;
   padding: 16px 32px;
- 
+  border: 1px solid #8E8F99;
+  border-radius: 4px;
+  color: #8E8F99;
+  /* width: 100%;
+  height: 100%; */
 }
+
 .custom-icon{
   display: flex;
-  width: 104px;
-  height: 56px;
-  fill: #8E8F99;
+  width: 104px ;
+  height: 56px ;
+  fill: currentColor;
+}
+.custom-list-icon:hover,
+.custom-list-icon:focus{
+  border: 1px solid var(--primery-band-color);
+  fill: #4d5ae5;
+ } 
+.customer-list>a:focus{
+  color: var(--primery-band-color);
+  
+}
+.customer-list>a:hover{
+  color: var(--primery-band-color);
+  
+}
 
-}
-.customer-list:hover{
- border: 1px solid #404BBF;
-}
-.customer-list:focus{
-border: 1px solid #404BBF;
-}
-.custom-icon:hover{
-  fill: #404BBF;
- 
-}
-.custom-icon:focus{
-  fill: #404BBF;
-}
+
 /*----------footer----------  */
 .footer-list .logo{
   display:inline;
@@ -450,8 +455,8 @@ color:var(--subtle-background-color);
   display:flex;
   justify-content:center;
   align-items:center;
-  /* width: 40px; */
-  /* height: 40px; */
+  width: 40px;
+  height: 40px;
   padding: 12px 12px;
   border-radius: 50%;
   background-color:var(--text-color);
@@ -544,6 +549,7 @@ cursor: pointer;
     border-right-color: var(--subaccent-color);
   /* text-align: center; */
     padding: 32px 16px;
+    
 }
 
 
@@ -562,9 +568,15 @@ cursor: pointer;
 .skills:nth-child(3n){
   margin-right: 0;
 }
-.skills-card{
+.skills-card{ 
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.skills-card:hover{
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+.decor-none{
+  display: block;
+  text-decoration: none;
+}
+.decor-none:hover,
+.decor-none:focus{
+ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
