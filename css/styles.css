@@ -50,13 +50,19 @@ body {
 .main-container{
   display: flex;
   align-items: center;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  
 }
 .header{
  display: flex;
   align-items: center; 
   
 }
+.page-hader{
+  /* width:1158px; */
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  margin: auto;
+}
+
 .site-nav{
   display: flex;
   margin-left: 77px;
@@ -96,6 +102,7 @@ body {
 }
 .page-hader{
   background-color: var(--secondary-color);
+  /*  */
 }
 
 .nav-link {
@@ -155,8 +162,7 @@ body {
   padding-top: 0;
 }
 .hero{
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  background-color:var(--headings-text-color); 
+
   padding-top: 192px;
   padding-bottom: 192px;
   text-align: center;
@@ -164,7 +170,7 @@ body {
   background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
   url(../images/people-office.jpg);
   background-size: cover;
-  display: block;
+  background-position: center;
   margin-left: auto;
   margin-right: auto
   
@@ -203,12 +209,10 @@ body {
      font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.04em;
-    
     border-radius: 4px;
     padding: 16px 34px;
-    
     text-align: center;
-    border: 1px solid var(--activ-but-color);
+     border: 1px solid transparent;
     color: var(--secondary-color);
     background-color: var(--primery-band-color);
     cursor: pointer;
@@ -282,7 +286,9 @@ text-transform: capitalize;
 color: var(--headings-text-color);
 
 }
-
+.our-team {
+    background-color: var(--subaccent-color);
+}
 .our-team-ic{
   display:flex;
   justify-content:center;
@@ -301,8 +307,8 @@ color: var(--headings-text-color);
   display:flex;
   justify-content:center;
   align-items:center;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   fill: #ffffff;
 }
 
@@ -347,13 +353,16 @@ color: var(--text-color);
 margin-bottom: 12px;
 }
 /* ------------Customer---------------- */
-
+.section-custom{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .customer{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
-   margin-bottom: 120px;
+   
 }
 .custom-list-icon{
   display: flex;
@@ -457,7 +466,6 @@ color:var(--subtle-background-color);
   align-items:center;
   width: 40px;
   height: 40px;
-  padding: 12px 12px;
   border-radius: 50%;
   background-color:var(--text-color);
 }
@@ -568,13 +576,12 @@ cursor: pointer;
 .skills:nth-child(3n){
   margin-right: 0;
 }
-.skills-card{ 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+
 
 .decor-none{
   display: block;
   text-decoration: none;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .decor-none:hover,
 .decor-none:focus{
