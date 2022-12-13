@@ -216,6 +216,7 @@ body {
     color: var(--secondary-color);
     background-color: var(--primery-band-color);
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:focus,
 .button:hover{
